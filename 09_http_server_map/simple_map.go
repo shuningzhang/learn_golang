@@ -2,14 +2,29 @@ package main
   
 import ("fmt")
 
+var content_t  map[string]string
+
 func main() {
-        var tt map[string]string
-        tt = make( map[string]string )
+		/* map变量定义 */
+		        var tt map[string]string
+			        tt = make( map[string]string )
 
-        tt["Beijing"] = "北京"
-	tt["Hebei"] = "河北"
-	tt["Tianjin"] = "天津"
+				content_t = make( map[string]string)
+					/* 变量内容初始化 */
+					        tt["Beijing"] = "北京"
+							tt["Hebei"] = "河北"
+								tt["Tianjin"] = "天津"
 
-        fmt.Println(tt["Hebei"])
-}
+									/* 变量内容访问 */
+									        fmt.Println(tt["Hebei"])
+
+										        delete(tt, "Hebei")
+
+											        fmt.Println(tt["Hebei"])
+
+			content_t["t"] = "tt"
+											}
+
+
+
 
